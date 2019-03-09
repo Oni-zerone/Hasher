@@ -8,12 +8,12 @@
 import Foundation
 import CommonCrypto
 
-public struct Hasher<Base: HasherCompatible> {
+public struct Hasher {
     
-    public let base: Base
+    public let data: Data?
     
-    public init(_ base: Base) {
-        self.base = base
+    public init(_ data: Data?) {
+        self.data = data
     }
 }
 
@@ -27,7 +27,7 @@ public extension Hasher {
     /// - Returns: A hash string using the specified hashing algorithm, or nil.
     public func hashWithRSA2048Asn1Header(_ type: HashType, output: OutputType = .hex) -> String? {
         
-        guard let data = self.base.data else { return nil }
+        guard let data = self.data else { return nil }
         
         let rsa2048Asn1Header:[UInt8] = [
             0x30, 0x82, 0x01, 0x22, 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86,
@@ -45,9 +45,9 @@ public extension Hasher {
     ///   - type: The type of hash to use.
     ///   - output: The type of hash output desired, defaults to .hex.
     ///   - Returns: The requested hash output or nil if failure.
-    public func hashed(_ type: HashType, output: OutputType = .hex) -> String? {
+    public func hashed(_ type: HashType, output: OutputType) -> String? {
         
-        guard let data = self.base.data else { return nil }
+        guard let data = self.data else { return nil }
         
         var digest = Data(count: Int(type.length))
         _ = digest.withUnsafeMutableBytes { (digestBytes: UnsafeMutablePointer<UInt8>) in
@@ -64,5 +64,32 @@ public extension Hasher {
             }
         }
         return output.parse(from: digest)
+    }
+}
+
+public extension Hasher {
+    
+    public func md5(_ output: OutputType = .hex) -> String? {
+        return self.hashed(.md5, output: output)
+    }
+    
+    public func sha1(_ output: OutputType = .hex) -> String? {
+        return self.hashed(.sha1, output: output)
+    }
+
+    public func sha224(_ output: OutputType = .hex) -> String? {
+        return self.hashed(.sha224, output: output)
+    }
+
+    public func sha256(_ output: OutputType = .hex) -> String? {
+        return self.hashed(.sha256, output: output)
+    }
+
+    public func sha384(_ output: OutputType = .hex) -> String? {
+        return self.hashed(.sha384, output: output)
+    }
+
+    public func sha512(_ output: OutputType = .hex) -> String? {
+        return self.hashed(.sha512, output: output)
     }
 }

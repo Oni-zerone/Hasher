@@ -11,27 +11,22 @@ public protocol HasherCompatible {
     
     associatedtype CompatibleType
     
-    var hasher: Hasher<Self> { get set }
+    var hasher: Hasher { get }
     
-    var data: Data? { get }
+    var hasher_data: Data? { get }
 }
 
 extension HasherCompatible {
     
-    public var hasher: Hasher<Self> {
-        get {
-            return Hasher(self)
-        }
-        set {
-            
-        }
+    public var hasher: Hasher {
+        return Hasher(self.hasher_data)
     }
 }
 
 extension String: HasherCompatible {
     public typealias CompatibleType = String
     
-    public var data: Data? {
+    public var hasher_data: Data? {
         return self.data(using: .utf8)
     }
 }
@@ -39,7 +34,7 @@ extension String: HasherCompatible {
 extension Data: HasherCompatible {
     public typealias CompatibleType = Data
     
-    public var data: Data? {
+    public var hasher_data: Data? {
         return self
     }
 }
