@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		23F8B92FE40C46CBE0BA0DD2 /* Pods-Hasher_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hasher_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hasher_Tests/Pods-Hasher_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		316F91765520CFF6FA8E1543 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		316F91765520CFF6FA8E1543 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3BB972BEA00B2C0B1E2D1841 /* Pods-Hasher_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hasher_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hasher_Example/Pods-Hasher_Example.release.xcconfig"; sourceTree = "<group>"; };
 		4352E75DBCC5B1B487962BC9 /* Pods-Hasher_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hasher_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hasher_Example/Pods-Hasher_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Hasher_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hasher_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,8 +44,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		714A7983E7E375481E74239F /* Pods_Hasher_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hasher_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87262ABBCD174A07EAAC0471 /* Pods-Hasher_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hasher_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hasher_Tests/Pods-Hasher_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BDFF5DDC0292BB75AAC5E3D4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		C1A479615A37D0B75640D439 /* Hasher.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Hasher.podspec; path = ../Hasher.podspec; sourceTree = "<group>"; };
+		BDFF5DDC0292BB75AAC5E3D4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C1A479615A37D0B75640D439 /* Hasher.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Hasher.podspec; path = ../Hasher.podspec; sourceTree = "<group>"; };
 		ED0AC42A822D4DAD5CC11588 /* Pods_Hasher_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hasher_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -212,10 +212,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 6RS7DS4QV5;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 6RS7DS4QV5;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -422,7 +424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -468,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -481,7 +483,9 @@
 			baseConfigurationReference = 4352E75DBCC5B1B487962BC9 /* Pods-Hasher_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6RS7DS4QV5;
 				INFOPLIST_FILE = Hasher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -496,7 +500,9 @@
 			baseConfigurationReference = 3BB972BEA00B2C0B1E2D1841 /* Pods-Hasher_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6RS7DS4QV5;
 				INFOPLIST_FILE = Hasher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -510,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 87262ABBCD174A07EAAC0471 /* Pods-Hasher_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 6RS7DS4QV5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -532,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 23F8B92FE40C46CBE0BA0DD2 /* Pods-Hasher_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 6RS7DS4QV5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
