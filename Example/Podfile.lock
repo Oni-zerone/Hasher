@@ -1,0 +1,16 @@
+PODS:
+  - Hasher (0.1.0)
+
+DEPENDENCIES:
+  - Hasher (from `../`)
+
+EXTERNAL SOURCES:
+  Hasher:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Hasher: 298dc2c13f5eecbf2a92eef771d619898a5addea
+
+PODFILE CHECKSUM: ac963184554b6b67e7fa05c54ef921c67c1d1fb1
+
+COCOAPODS: 1.5.3
