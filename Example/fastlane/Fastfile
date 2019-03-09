@@ -18,17 +18,16 @@ platform :ios do
 
   desc "Default CI lane"
   lane :ci do
-    lint
+    update_dependencies
     pod_lint
     test
     coverage
   end
 
-  desc  "SwiftLint linting"
-  lane :lint do
-    swiftlint(
-      mode: :lint,
-      ignore_exit_status: false
+  desc "Update dependencies"
+  lane :update_dependencies do
+    cocoapods(
+      repo_update: true
     )
   end
 
@@ -42,7 +41,7 @@ platform :ios do
   desc "Runs all the tests"
   lane :test do
     scan(
-      scheme: "Hasher-Example",
+      scheme: "PunkAPI-Example",
       device: "iPhone XS",
       code_coverage: true
     )
@@ -52,11 +51,11 @@ platform :ios do
   lane :coverage do
     slather(
           travis: true,
-          workspace: "Hasher.xcworkspace",
-          proj: "Hasher.xcodeproj",
-          scheme: "Hasher-Example",
-          binary_basename: "Hasher",
-          source_directory: "../Hasher",
+          workspace: "PunkAPI.xcworkspace",
+          proj: "PunkAPI.xcodeproj",
+          scheme: "PunkAPI-Example",
+          binary_basename: "PunkAPI",
+          source_directory: "../PunkAPI/*",
           simple_output: true,
           coveralls: true
         )
