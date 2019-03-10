@@ -1,6 +1,6 @@
 # Hasher
 
-[![CI Status](https://img.shields.io/travis/Oni-zerone/Hasher.svg?style=flat)](https://travis-ci.com/Oni-zerone/Hasher)
+[![Build Status](https://travis-ci.com/Oni-zerone/Hasher.svg?branch=develop)](https://travis-ci.com/Oni-zerone/Hasher)
 [![Coverage Status](https://coveralls.io/repos/github/Oni-zerone/Hasher/badge.svg?branch=develop)](https://coveralls.io/github/Oni-zerone/Hasher?branch=develop)
 [![Version](https://img.shields.io/cocoapods/v/Hasher.svg?style=flat)](https://cocoapods.org/pods/Hasher)
 [![License](https://img.shields.io/cocoapods/l/Hasher.svg?style=flat)](https://cocoapods.org/pods/Hasher)
