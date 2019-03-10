@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,8 +20,77 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lmC-oX-WTv">
+                                <rect key="frame" x="8" y="72" width="359" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didChangeHashType:" destination="vXZ-lx-hvc" eventType="valueChanged" id="dmB-Kf-fiA"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TTa-QP-5Rb">
+                                <rect key="frame" x="8" y="132" width="359" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didUpdateField:" destination="vXZ-lx-hvc" eventType="editingChanged" id="jMh-Zq-7co"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0i-Ps-Noe">
+                                <rect key="frame" x="8" y="194" width="359" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dUb-kq-bfS">
+                                <rect key="frame" x="112.5" y="28" width="150" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Bzc-op-JoM"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didChangeOutputType:" destination="vXZ-lx-hvc" eventType="valueChanged" id="lSM-Mh-xxB"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYk-Bg-C3i">
+                                <rect key="frame" x="32" y="222.5" width="311" height="30"/>
+                                <state key="normal" title="Copy HASH"/>
+                                <connections>
+                                    <action selector="copyHashAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IZt-3O-u0D"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="K0i-Ps-Noe" firstAttribute="leading" secondItem="TTa-QP-5Rb" secondAttribute="leading" id="1tB-EL-zhA"/>
+                            <constraint firstItem="TTa-QP-5Rb" firstAttribute="top" secondItem="lmC-oX-WTv" secondAttribute="bottom" constant="32" id="EQc-as-Ceu"/>
+                            <constraint firstItem="K0i-Ps-Noe" firstAttribute="top" secondItem="TTa-QP-5Rb" secondAttribute="bottom" constant="32" id="LfH-kd-XxG"/>
+                            <constraint firstItem="lmC-oX-WTv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="8" id="aRR-8E-ffL"/>
+                            <constraint firstItem="TTa-QP-5Rb" firstAttribute="leading" secondItem="lmC-oX-WTv" secondAttribute="leading" id="aTJ-UF-LDV"/>
+                            <constraint firstItem="FYk-Bg-C3i" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="16" id="dDD-XR-0OF"/>
+                            <constraint firstItem="K0i-Ps-Noe" firstAttribute="trailing" secondItem="TTa-QP-5Rb" secondAttribute="trailing" id="gBT-3D-Mqp"/>
+                            <constraint firstItem="dUb-kq-bfS" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="gbd-kN-EHw"/>
+                            <constraint firstItem="FYk-Bg-C3i" firstAttribute="top" secondItem="K0i-Ps-Noe" secondAttribute="bottom" constant="8" id="ljZ-8z-h9f"/>
+                            <constraint firstAttribute="trailing" secondItem="lmC-oX-WTv" secondAttribute="trailing" constant="8" id="pNp-jK-f8t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FYk-Bg-C3i" secondAttribute="trailing" constant="16" id="t07-e7-xcc"/>
+                            <constraint firstItem="TTa-QP-5Rb" firstAttribute="trailing" secondItem="lmC-oX-WTv" secondAttribute="trailing" id="wYD-ca-cgT"/>
+                            <constraint firstItem="lmC-oX-WTv" firstAttribute="top" secondItem="dUb-kq-bfS" secondAttribute="bottom" constant="16" id="wZ8-2V-8QO"/>
+                            <constraint firstItem="dUb-kq-bfS" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="wch-lJ-qlK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hashTypeSelector" destination="lmC-oX-WTv" id="yWD-GV-dE2"/>
+                        <outlet property="outputTypeSelector" destination="dUb-kq-bfS" id="EvP-AC-acK"/>
+                        <outlet property="resultLabel" destination="K0i-Ps-Noe" id="50m-3w-bMY"/>
+                        <outlet property="textField" destination="TTa-QP-5Rb" id="QKx-QI-ciy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
