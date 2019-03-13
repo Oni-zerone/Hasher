@@ -79,24 +79,24 @@ class HashSpec: QuickSpec {
                     expect("".hasher.sha1()).to(equal("da39a3ee5e6b4b0d3255bfef95601890afd80709"))
                 }
                 
-                xit("Get correct hash as base64 encoded") {
+                it("Get correct hash as base64 encoded") {
                     expect("Hello friend. Hello friend? That's lame. Maybe I should give you a name.".hasher.sha1(.base64))
-                        .to(equal("zeNxEbro6N5sNgyUc5t08w=="))
+                        .to(equal("7v7LFPjiE6lnclNMdrzE0H1+v/I="))
                     expect("The douche I was dating proposed to me, can you believe? I mean, what an asshole.".hasher.sha1(.base64))
-                        .to(equal("3CCsY2RWDN8AzeNDyasHDA=="))
+                        .to(equal("G/29uWi78Z+XFT64oIP3V84op44="))
                     expect("That neat little ditty was Trenton's idea. She may look innocent, but I'd be careful. She's got some Allah Akbar in her.".hasher.sha1(.base64))
-                        .to(equal("eL7a0Fn/faX6dPd5/OaoFw=="))
+                        .to(equal("TtzJRSeqBVMAW82jq3QE6Y8BWbA="))
                     expect("The world is a dangerous place, Elliot, not because of those who do evil, but because of those who look on and do nothing.".hasher.sha1(.base64))
-                        .to(equal("6DlkaLQ6ePHbu3I30xK2cQ=="))
+                        .to(equal("ig90BkaHf6qd+1fd6l7NoPUpsMQ="))
                     expect("People who get violent get that way because they can't communicate.".hasher.sha1(.base64))
-                        .to(equal("IXUAgehoZNMogRObFa+2mg=="))
+                        .to(equal("4Nk7cp7KpFrhuk6vMJFXufm/+44="))
                     expect("Shit. I'm gonna have to let him hug me, aren't I?".hasher.sha1(.base64))
-                        .to(equal("Wkc//jM3W8r41pw2lGIAvQ=="))
+                        .to(equal("0IO8ffl9gF2aGJcoWnnh6LbAVMI="))
                     expect("True courage is about being honest with yourself. Especially when it's difficult.".hasher.sha1(.base64))
-                        .to(equal("yKgWbJOFoxdeo2PBHftPUQ=="))
+                        .to(equal("eBKvAcnfTqAALONN2mdW+lggMGw="))
                     expect("Life is so much easier when you're numb.".hasher.sha1(.base64))
-                        .to(equal("RBY9V0Rg7HFxqGCt8fiokA=="))
-                    expect("".hasher.sha1(.base64)).to(equal("1B2M2Y8AsgTpgAmY7PhCfg=="))
+                        .to(equal("seBhua9TkY+5MYmBJ10sSTBwJyU="))
+                    expect("".hasher.sha1(.base64)).to(equal("2jmj7l5rSw0yVb/vlWAYkK/YBwk="))
                 }
             }
         }
