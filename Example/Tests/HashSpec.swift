@@ -10,6 +10,8 @@ import Quick
 import Nimble
 import Hasher
 
+// Reference hashes got from https://quickhash.com
+
 class HashSpec: QuickSpec {
     override func spec() {
         
@@ -37,22 +39,22 @@ class HashSpec: QuickSpec {
 
                 it("Get correct hash as base64 encoded") {
                     expect("Hello friend. Hello friend? That's lame. Maybe I should give you a name.".hasher.md5(.base64))
-                        .to(equal("Y2RlMzcxMTFiYWU4ZThkZTZjMzYwYzk0NzM5Yjc0ZjM="))
+                        .to(equal("zeNxEbro6N5sNgyUc5t08w=="))
                     expect("The douche I was dating proposed to me, can you believe? I mean, what an asshole.".hasher.md5(.base64))
-                        .to(equal("ZGMyMGFjNjM2NDU2MGNkZjAwY2RlMzQzYzlhYjA3MGM"))
+                        .to(equal("3CCsY2RWDN8AzeNDyasHDA=="))
                     expect("That neat little ditty was Trenton's idea. She may look innocent, but I'd be careful. She's got some Allah Akbar in her.".hasher.md5(.base64))
-                        .to(equal("NzhiZWRhZDA1OWZmN2RhNWZhNzRmNzc5ZmNlNmE4MTc"))
+                        .to(equal("eL7a0Fn/faX6dPd5/OaoFw=="))
                     expect("The world is a dangerous place, Elliot, not because of those who do evil, but because of those who look on and do nothing.".hasher.md5(.base64))
-                        .to(equal("ZTgzOTY0NjhiNDNhNzhmMWRiYmI3MjM3ZDMxMmI2NzE="))
+                        .to(equal("6DlkaLQ6ePHbu3I30xK2cQ=="))
                     expect("People who get violent get that way because they can't communicate.".hasher.md5(.base64))
-                        .to(equal("MjE3NTAwODFlODY4NjRkMzI4ODExMzliMTVhZmI2OWE="))
+                        .to(equal("IXUAgehoZNMogRObFa+2mg=="))
                     expect("Shit. I'm gonna have to let him hug me, aren't I?".hasher.md5(.base64))
-                        .to(equal("NWE0NzNmZmUzMzM3NWJjYWY4ZDY5YzM2OTQ2MjAwYmQ="))
+                        .to(equal("Wkc//jM3W8r41pw2lGIAvQ=="))
                     expect("True courage is about being honest with yourself. Especially when it's difficult.".hasher.md5(.base64))
-                        .to(equal("YzhhODE2NmM5Mzg1YTMxNzVlYTM2M2MxMWRmYjRmNTE="))
+                        .to(equal("yKgWbJOFoxdeo2PBHftPUQ=="))
                     expect("Life is so much easier when you're numb.".hasher.md5(.base64))
-                        .to(equal("NDQxNjNkNTc0NDYwZWM3MTcxYTg2MGFkZjFmOGE4OTA="))
-                    expect("".hasher.md5(.base64)).to(equal("ZDQxZDhjZDk4ZjAwYjIwNGU5ODAwOTk4ZWNmODQyN2U="))
+                        .to(equal("RBY9V0Rg7HFxqGCt8fiokA=="))
+                    expect("".hasher.md5(.base64)).to(equal("1B2M2Y8AsgTpgAmY7PhCfg=="))
                 }
             }
         }
