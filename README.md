@@ -1,5 +1,4 @@
-[Hasher](./assets/Hasher.png)
-
+[<img align="left" src="assets/Hasher.png" hspace="20">](#Hasher)
 [![Build Status](https://travis-ci.com/Oni-zerone/Hasher.svg?branch=develop)](https://travis-ci.com/Oni-zerone/Hasher)
 [![Coverage Status](https://coveralls.io/repos/github/Oni-zerone/Hasher/badge.svg?branch=develop)](https://coveralls.io/github/Oni-zerone/Hasher?branch=develop)
 [![Version](https://img.shields.io/cocoapods/v/Hasher.svg?style=flat)](https://cocoapods.org/pods/Hasher)
