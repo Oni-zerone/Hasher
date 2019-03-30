@@ -1,4 +1,4 @@
-# Hasher
+[Hasher](./assets/Hasher.png)
 
 [![Build Status](https://travis-ci.com/Oni-zerone/Hasher.svg?branch=develop)](https://travis-ci.com/Oni-zerone/Hasher)
 [![Coverage Status](https://coveralls.io/repos/github/Oni-zerone/Hasher/badge.svg?branch=develop)](https://coveralls.io/github/Oni-zerone/Hasher?branch=develop)
