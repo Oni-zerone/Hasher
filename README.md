@@ -23,7 +23,7 @@ pod 'Hasher'
 
 ## Author
 
-acct<blob>=<NULL>, oni.zerone@gmail.com
+Andrea Altea, oni.zerone@gmail.com
 
 ## License
 
