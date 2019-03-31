@@ -1,5 +1,5 @@
-[<img align="left" src="logo.png" hspace="20">](#Hasher)  
-***
+<img src="logo.png" alt="Miss Electric Eel 2016" width="36" height="36"> Hasher
+======================================
 [![Build Status](https://travis-ci.com/Oni-zerone/Hasher.svg?branch=develop)](https://travis-ci.com/Oni-zerone/Hasher)
 [![Coverage Status](https://coveralls.io/repos/github/Oni-zerone/Hasher/badge.svg?branch=develop)](https://coveralls.io/github/Oni-zerone/Hasher?branch=develop)
 [![Version](https://img.shields.io/cocoapods/v/Hasher.svg?style=flat)](https://cocoapods.org/pods/Hasher)
