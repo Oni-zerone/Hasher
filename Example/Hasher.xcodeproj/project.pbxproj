@@ -51,7 +51,7 @@
 		97B30161224FFBD900B5522B /* SHA1Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1Spec.swift; sourceTree = "<group>"; };
 		97B30163224FFC4A00B5522B /* SHA512Spec copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SHA512Spec copy.swift"; sourceTree = "<group>"; };
 		BDFF5DDC0292BB75AAC5E3D4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		C1A479615A37D0B75640D439 /* Hasher.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Hasher.podspec; path = ../Hasher.podspec; sourceTree = "<group>"; };
+		C1A479615A37D0B75640D439 /* Hasher.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Hasher.podspec; path = ../Hasher.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ED0AC42A822D4DAD5CC11588 /* Pods_Hasher_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hasher_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
