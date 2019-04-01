@@ -13,15 +13,14 @@ Pod::Spec.new do |s|
   s.swift_version    = '4.3'
 
   s.description      = <<-DESC
-A simple hashing library based on CommonCrypto, extensible to every type you want.
+A wrapper around CommonCrypto to calculate Hashes of various objects.
                        DESC
 
   s.homepage         = 'https://github.com/Oni-zerone/Hasher'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Andrea Altea' => 'oni.zerone@gmail.com' }
   s.source           = { :git => 'https://github.com/Oni-zerone/Hasher.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/Oni_zerone'
+  s.social_media_url = 'https://twitter.com/Oni_zerone'
 
   s.ios.deployment_target = '10.0'
 
